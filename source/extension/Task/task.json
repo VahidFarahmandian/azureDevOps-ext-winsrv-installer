@@ -1,0 +1,84 @@
+{
+    "id": "93565074-bb14-48be-888e-d0729e6f2929",
+    "name": "JingetWindowsServiceInstaller",
+    "friendlyName": "Jinget Windows Service Installer",
+    "description": "Install windows service",
+    "helpMarkDown": "More information: contact farahmandian2011@gmail.com",
+    "category": "Utility",
+    "author": "Vahid Farahmandian",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "minimumAgentVersion": "1.0.0",
+    "instanceNameFormat": "Install Windows Service $(serviceName)",
+    "groups": [
+        {
+            "name": "serviceAccountOptions",
+            "displayName": "Service Account Configurations",
+            "isExpanded": true
+        }
+    ],
+    "inputs": [
+        {
+            "name": "serviceName",
+            "type": "string",
+            "label": "Service Name:",
+            "helpMarkDown": "",
+            "required": true
+        },
+        {
+            "name": "serviceFriendlyName",
+            "type": "string",
+            "label": "Display Name:",
+            "required": false,
+            "defaultValue": ""
+        },
+        {
+            "name": "service_binaryPath",
+            "type": "string",
+            "label": "Path to Executable:",
+            "helpMarkDown": "",
+            "required": true
+        },
+        {
+            "name": "service_startupType",
+            "type": "pickList",
+            "label": "Startup Type:",
+            "required": false,
+            "defaultValue": "Automatic",
+            "options": {
+                "Automatic": "Automatic",
+                "Manual": "Manual",
+                "Disabled": "Disabled"
+            }
+        },
+        {
+            "name": "service_identity_username",
+            "type": "string",
+            "label": "Logon as(Username):",
+            "required": true,
+            "groupName": "serviceAccountOptions"
+        },
+        {
+            "name": "service_identity_password",
+            "type": "string",
+            "label": "Logon as(Password):",
+            "helpMarkDown": "If accounts such as Netowork Service are going to use, just leave this box empty",
+            "defaultValue": "",
+            "groupName": "serviceAccountOptions"
+        }
+    ],
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\InstallWindowsService.ps1",
+            "argumentFormat": "",
+            "workingDirectory": ""
+        }
+    }
+}
