@@ -2,7 +2,7 @@
     "id": "93565074-bb14-48be-888e-d0729e6f2929",
     "name": "JingetWindowsServiceInstaller",
     "friendlyName": "Jinget Windows Service Installer",
-    "description": "Install windows service",
+    "description": "Using this extension, you can install the desired Windows service on the destination server in your pipelines",
     "helpMarkDown": "More information: contact farahmandian2011@gmail.com",
     "category": "Utility",
     "author": "Vahid Farahmandian",

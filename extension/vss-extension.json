@@ -1,0 +1,76 @@
+{
+    "manifestVersion": 1,
+    "id": "JingetWindowsServiceInstaller",
+    "name": "Jinget Windows Service Installer",
+    "version": "1.0.0",
+    "publisher": "VahidFarahmandian",
+    "description": "Using this extension, you can install the desired Windows service on the destination server in your pipelines",
+    "public": true,
+    "branding": {
+        "color": "rgb(0, 127, 255)",
+        "theme": "dark"
+    },
+    "links": {
+        "home": {
+            "uri": "https://jinget.ir"
+        },
+        "repository": {
+            "uri": "https://github.com/VahidFarahmandian/azureDevOps-ext-winsrv-installer"
+        },
+        "issues": {
+            "uri": "https://github.com/VahidFarahmandian/azureDevOps-ext-winsrv-installer/issues"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/VahidFarahmandian/azureDevOps-ext-winsrv-installer"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "windows service",
+        "win service"
+    ],
+    "icons": {
+        "default": "images/extension-icon.jpg"
+    },
+    "files": [
+        {
+            "path": "Task"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "JingetWindowsServiceInstaller",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Task"
+            }
+        }
+    ],
+    "screenshots": [
+        {
+            "path": "screenshots/1.png"
+        },
+        {
+            "path": "screenshots/2.png"
+        },
+        {
+            "path": "screenshots/3.png"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    }
+}
