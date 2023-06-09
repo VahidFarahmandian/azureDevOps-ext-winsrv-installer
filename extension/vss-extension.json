@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "JingetWindowsServiceInstaller",
     "name": "Jinget Windows Service Installer",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "VahidFarahmandian",
     "description": "Using this extension, you can install the desired Windows service on the destination server in your pipelines",
     "public": true,
@@ -38,7 +38,7 @@
         "win service"
     ],
     "icons": {
-        "default": "images/extension-icon.jpg"
+        "default": "images/extension-icon.png"
     },
     "files": [
         {
