@@ -15,15 +15,15 @@
             "uri": "https://jinget.ir"
         },
         "repository": {
-            "uri": "https://github.com/VahidFarahmandian/azureDevOps-ext-winsrv-installer"
+            "uri": "https://github.com/VahidFarahmandian/jinget-azure-devops-win-srv-installer"
         },
         "issues": {
-            "uri": "https://github.com/VahidFarahmandian/azureDevOps-ext-winsrv-installer/issues"
+            "uri": "https://github.com/VahidFarahmandian/jinget-azure-devops-win-srv-installer/issues"
         }
     },
     "repository": {
         "type": "git",
-        "uri": "https://github.com/VahidFarahmandian/azureDevOps-ext-winsrv-installer"
+        "uri": "https://github.com/VahidFarahmandian/jinget-azure-devops-win-srv-installer"
     },
     "targets": [
         {
