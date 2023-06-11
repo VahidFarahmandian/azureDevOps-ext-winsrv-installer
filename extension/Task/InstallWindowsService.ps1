@@ -44,7 +44,6 @@ if ($service.Length -gt 0) {
         Write-Host "Service PID: $($pidnumber) killed"
     }
     Write-Host "Removing service..."
-    ##Remove-Service -Name "$($serviceName)"
     sc.exe delete "$($serviceName)"
     Write-Host "Service removed..."
 }
