@@ -19,6 +19,10 @@ In the design of installation pipelines and continuous deployment, Windows servi
 
 **Display Name (Optional):** This is the name which is displayed to the user. If this property set as empty, then *Service Name* will be used as *Display Name*.
 
+**Source Directory (Required):** This is the path to directory which its content should be copied to *Destination Directory*.
+
+**Destination Directory (Required):** This is the path to directory which files should be copied to from *Source Directory*.
+
 **Path to Executable (required):** It is to specify the location of Windows service files. In most cases, the required artifacts must be downloaded to the target device before the Jinget Windows Service Installer task is added to the pipeline.
 
 **Startup Type (required):** Specifies the Windows service startup type. It could be *Automatic*, *Manual* or *Disabled*.

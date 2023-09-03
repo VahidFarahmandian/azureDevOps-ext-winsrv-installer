@@ -9,7 +9,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 1
+        "Patch": 2
     },
     "visibility": [
         "Build",
@@ -40,10 +40,24 @@
             "defaultValue": ""
         },
         {
+            "name": "file_source",
+            "type": "filePath",
+            "label": "Source Directory:",
+            "helpMarkDown": "",
+            "required": true
+        },
+        {
+            "name": "file_dest",
+            "type": "filePath",
+            "label": "Destination Directory:",
+            "helpMarkDown": "Files in selected 'Source Directory' will be copied to this directory",
+            "required": true
+        },
+        {
             "name": "service_binaryPath",
             "type": "string",
             "label": "Path to Executable:",
-            "helpMarkDown": "",
+            "helpMarkDown": "Path to the windows service binary path in destination folder",
             "required": true
         },
         {
@@ -76,7 +90,7 @@
     ],
     "execution": {
         "PowerShell": {
-            "target": "$(currentDirectory)\\InstallWindowsService.ps1",
+            "target": "$(currentDirectory)\\Worker.ps1",
             "argumentFormat": "",
             "workingDirectory": ""
         }
