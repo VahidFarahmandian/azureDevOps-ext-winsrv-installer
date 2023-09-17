@@ -12,7 +12,7 @@ function RemoveService
 {
     Param($serviceName)
 
-    $pidnumber  = (Get-WmiObject win32_service | where { $_.name -eq $($serviceName)}).processID
+    $pidnumber  = (Get-WmiObject win32_service | where { $_.name -eq "$($serviceName)"}).processID
     if($pidnumber -gt 0)
     {
         Write-Host "Service PID: $($pidnumber) is alive!"
@@ -68,6 +68,14 @@ function StartService
 {
     Param($serviceName)
 
-    Write-Host "Starting service..."
+    Write-Host "Restarting service..."
     Start-Service -Name "$($serviceName)"
+    (Get-Service $serviceName).WaitForStatus('Running')
+    Start-Sleep -Seconds 5
+
+    StopService
+
+    Start-Service -Name "$($serviceName)"
+    (Get-Service $serviceName).WaitForStatus('Running')
+    Write-Host "Service restarted..."
 }
